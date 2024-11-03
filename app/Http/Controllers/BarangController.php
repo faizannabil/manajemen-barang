@@ -39,13 +39,7 @@ class BarangController extends Controller
         ], [
             'stock.integer' => 'The stock value must be a valid integer.',
         ]);
-        Barang::create([
-            'nama_barang'=> $request->nama_barang,
-            'jenis_barang' => $request->jenis_barang,
-            'stock' => $request->stock,
-            'status' => $request->status,
-            'harga_satuan' => $request->harga_satuan,
-        ]);
+        Barang::create($request->all());
         return redirect()->route('barang.index');
     }
 
@@ -82,13 +76,7 @@ class BarangController extends Controller
         ], [
             'stock.integer' => 'The stock value must be a valid integer.',
         ]);
-        $barang->update([
-            'nama_barang'=> $request->nama_barang,
-            'jenis_barang' => $request->jenis_barang,
-            'stock' => $request->stock,
-            'status' => $request->status,
-            'harga_satuan' => $request->harga_satuan,
-        ]);
+        $barang->update($request->all());
         return redirect()->route('barang.index');
 
     }

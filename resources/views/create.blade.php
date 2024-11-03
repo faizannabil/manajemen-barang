@@ -16,15 +16,11 @@
         <tr>
             <td>
                 <label for="jenis_barang">Jenis barang</label>
+            
             </td>
             <td>
-               <select name="jenis_barang" id="">
-                <option value="">--PILIH--</option>
-                <option value="elektronik">elektroik</option>
-                <option value="perabotan">perabotan</option>
-                <option value="pangan">pangan</option>
-               </select>
-            </td>
+                <input type="text" name="jenis_barang" class="form-control" required>
+        </td>
         </tr>
         <tr>
             <td>

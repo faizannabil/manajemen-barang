@@ -17,14 +17,9 @@
             <td>
                 <label for="jenis_barang">Jenis barang</label>
             </td>
-            <td>
-               <select name="jenis_barang" id="">
-                <option value="">--PILIH--</option>
-                <option value="elektronik" {{$barang->jenis_barang === 'elektronik' ? 'selected' : ''}}>elektroik</option>
-                <option value="perabotan" {{$barang->jenis_barang === 'perabotan' ? 'selected' : ''}}>perabotan</option>
-                <option value="pangan" {{$barang->jenis_barang === 'pangan' ? 'selected' : ''}}>pangan</option>
-                
-               </select>
+            
+                <td>
+                <input type="text" name="jenis_barang" class="form-control"  value="{{$barang->jenis_barang}}"required>
             </td>
         </tr>
         <tr>
